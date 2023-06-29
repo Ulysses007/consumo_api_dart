@@ -3,8 +3,6 @@ import 'dart:convert';
 import 'package:consumo_api_dart/models/curso_model.dart';
 import 'package:consumo_api_dart/models/endereco_model.dart';
 
-
-
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 class Aluno {
   int id;
@@ -55,5 +53,10 @@ class Aluno {
           <Curso>[],
       endereco: Endereco.fromMap(map['endereco'] ?? <String, dynamic>{}),
     );
+  }
+
+  @override
+  String toString() {
+    return 'Aluno(id: $id, nome: $nome, idade: $idade, nomeCursos: $nomeCursos, cursos: $cursos, endereco: $endereco)';
   }
 }
