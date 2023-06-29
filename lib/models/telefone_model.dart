@@ -29,8 +29,8 @@ class Telefone {
 // passo 2 da deserialização
   factory Telefone.fromMap(Map<String, dynamic> map) {
     return Telefone(
-      ddd: map['ddd'],
-      fone: map['fone'],
+      ddd: map['ddd']??'',
+      fone: map['fone'] ??'',
     );
   }
 
